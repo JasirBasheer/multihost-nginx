@@ -1,4 +1,3 @@
-# Multi-Host Nginx
 
 Did you know? All of these projects are running on **one VM**!  
 
