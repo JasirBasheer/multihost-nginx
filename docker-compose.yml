@@ -36,3 +36,5 @@ networks:
     external: true
 volumes:
   frontend_builds:
+    external: true
+
