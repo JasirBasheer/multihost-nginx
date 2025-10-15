@@ -14,7 +14,7 @@ services:
       - dibolky_net
       - ecommerce_net
       - aadhaar_ocr_net
-      - url_shortner_net
+      # - url_shortner_net
 
   certbot:
     image: certbot/certbot
