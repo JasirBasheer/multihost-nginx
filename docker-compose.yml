@@ -1,3 +1,5 @@
+version: "3.9"
+
 services:
   nginx:
     image: nginx:latest
@@ -11,10 +13,7 @@ services:
       - /var/www/html:/var/www/html
       - /etc/letsencrypt:/etc/letsencrypt
     networks:
-      - dibolky_net
-      - ecommerce_net
-      - aadhaar_ocr_net
-      # - url_shortner_net
+      - multi_net
 
   certbot:
     image: certbot/certbot
@@ -28,13 +27,9 @@ services:
         certbot renew --webroot -w /var/www/html;
         sleep 12h;
       done"
+    networks:
+      - multi_net
 
 networks:
-  dibolky_net:
+  multi_net:
     external: true
-  ecommerce_net:
-    external: true
-  aadhaar_ocr_net:
-    external: true
-  # url_shortner_net:
-  #   external: true
