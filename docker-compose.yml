@@ -22,7 +22,10 @@ services:
     entrypoint: >
       sh -c "certbot certonly --webroot --webroot-path=/var/www/html
       --email jasirbinbasheerpp@gmail.com --agree-tos --no-eff-email
-      -d tool.dibolky.com"
+      -d tool.dibolky.com
+      -d woodstreet.jasirbasheer.dev 
+      -d aadhaar-ocr.jasirbasheer.dev 
+      "
 
     networks:
       - multi_net
