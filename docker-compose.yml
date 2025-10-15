@@ -36,5 +36,5 @@ networks:
     external: true
   aadhaar_ocr_net:
     external: true
-  url_shortner_net:
-    external: true
+  # url_shortner_net:
+  #   external: true
