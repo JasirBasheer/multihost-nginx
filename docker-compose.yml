@@ -8,7 +8,7 @@ services:
       - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - /var/www/html:/var/www/html
+      - frontend_builds:/var/www/html
       - /etc/letsencrypt:/etc/letsencrypt
     networks:
       - multi_net
