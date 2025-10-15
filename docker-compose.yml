@@ -34,3 +34,5 @@ services:
 networks:
   multi_net:
     external: true
+volumes:
+  frontend_builds:
