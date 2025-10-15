@@ -20,11 +20,10 @@ services:
       - /var/www/html:/var/www/html
       - /etc/letsencrypt:/etc/letsencrypt
     entrypoint: >
-      sh -c "trap exit TERM;
-      while :; do
-        certbot renew --webroot -w /var/www/html;
-        sleep 12h;
-      done"
+      sh -c "certbot certonly --webroot --webroot-path=/var/www/html
+      --email jasirbinbasheerpp@gmail.com --agree-tos --no-eff-email
+      -d tool.dibolky.com"
+
     networks:
       - multi_net
 
